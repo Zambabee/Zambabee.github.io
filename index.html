@@ -35,7 +35,62 @@
 				
 				<section>
 					<h1>Chat-palvelin</h1>
+					<p>Oma versio on melkein sama kuin tunneilla tehty esimerkki. Lisäsin siihen, että jokainen scoketti saa nimen, joka on socketin IP-osoite ja portin numero. En myöskään kaiuta viestiä socketille joka sen on alunperin lähettäny.</p>
 				</section>
+			</section>
+			
+			<section>
+				<section>
+				<h1>Viikko 2</h1>
+				<p>Verkkoprotokollat</p>
+				<p>HTTP, Websocket ja FTP</p>
+				</section>
+
+				<section>
+				<h1>HTTP</h1>
+				<p><small>Hypertext transfer protocol</small></p>
+				<ul>
+					<li>Asiakas-palvelin protokolla</li>
+					<li>Asiakas (esim. selain) avaa TCP-yhteyden palvelimelle ja lähettää pyynnön, johon palvelin sitten vastaa palauttamalla vaikka HTML-sivut.<br> Esimerkiksi selaimen http://www.google.com pyyntöön palvelin vastaa palauttamalla googlen verkkosivut.</li>
+					<li>Yleinen HTTP-pyyntö on GET, joka palauttaa jotain käyttäjän haluamaa tietoa tietyltä palvelimelta (GET / HTTP/1.1 host:www.google.com).</li>
+				</ul>
+				</section>
+
+				<section>
+				<h1>Websocket</h1>
+				<ul>
+					<li>Mahdollistaa 2-suuntaisen kommunikaation selaimen ja palvelimen välillä.</li>
+					<li>Kommunikaatio tapahtuu TCP-yhteyden välityksellä.</li>
+					<li>JavaScript-kieleen on saatavilla useita Websocket-kirjastoja, joista yksi on <a href="http://socket.io">Socket.io</a></li>
+				</ul>
+				</section>
+
+				<section>
+				<h1>Websocket</h1>
+				<ul>
+					<li>Socket.io sisältää asiakaspuolen kirjaston ja Node.Js:lle palvelinpuolen kirjaston.</li>
+					<li>Socket.io:n <a href="http://socket.io/docs/">asennus ja käyttö</a></li>
+				</ul>
+				</section>
+
+				<section>
+				<h1>FTP</h1>
+				<p><small>File transfer protocol</small></p>
+				<ul>
+					<li>TCP-protokollaa hyödyntävä tiedonsiirtomenetelmä kahden tietokoneen välillä.</li>
+					<li>Toimii asiakas-palvelin periaatteella (asiakas ottaa yhteyden palvelimeen).</li>
+					<li>Käytetään mm. verkkosivujen hallinnointiin (verkkosivut siirretään FTP:n avulla palvelimelle).</li>
+				</ul>
+				</section>	
+
+				<section>
+				<h1>FTP</h1>>
+				<ul>
+					<li>Esimerkiksi <a href="https://filezilla-project.org">FileZilla</a> käyttää FTP:tä tiedostojen siirrossa.</li>
+					<li>HUOM. FTP tiedonsiirto on suojaamaton.</li>
+					<li>FTPS mahdollistaa suojatun yhteyden.</li>
+				</ul>
+				</section>		
 			</section>
 		</div>
 	</div>
