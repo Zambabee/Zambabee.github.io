@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>Ploki</title>
 	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="lib/css/zenburn.css">
 	<link rel="stylesheet" href="css/theme/black.css" id="theme">	
 	<!--Add support for earlier versions of Internet Explorer -->
 	<!--[if lt IE 9]>
@@ -91,6 +92,31 @@
 					<li>FTPS mahdollistaa suojatun yhteyden.</li>
 				</ul>
 				</section>		
+			</section>
+			
+			<section>
+				<section>
+					<h1>Viikko 3</h1>
+					<p><small>Irclokki</small></p>
+					<p>Sovelluksen luonti Openshiftiin:</p><br>
+					<pre><code>rhc app create irclokki nodejs-0.10 --from-code  https://github.com/jvanhalen/irclokki.git</code></pre>
+					<p>Mysql-cartridgen lisäys:</p><br>
+					<pre><code>rhc cartridge add mysql-5.5 -a irclokki</code></pre> 
+				</section>
+				
+				<section>
+					<p><small>Irclokki</small></p>
+					<p>Tietokannan luonti:</p><br>
+					<pre><code>rhc ssh irclokki<br>mysql<br>DROP DATABASE if exists irclog;<br>CREATE DATABASE irclog;<br>USE irclog;<br>CREATE TABLE log (id INT PRIMARY KEY AUTO_INCREMENT, timestamp BIGINT, message TEXT);</code></pre>
+					<p>Sovelluksen käynnistäminen ja pysäyttäminen:</p><br>
+					<pre><code>rhc app-restart irclokki</code></pre>
+					<pre><code>rhc app-stop irclokki</code></pre>  
+				</section>
+
+				<section>
+					<p><small>Irclokki</small></p>
+					<p>Tämä onnistui linuxilla ilman suurempia ongelmia. Pientä häikkää oli tuon sovelluksen käynnistäminen app-start komennolla, mutta app-restart toimi hyvin.</p>
+				</section>
 			</section>
 		</div>
 	</div>
